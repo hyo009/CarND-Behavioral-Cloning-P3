@@ -1,1 +1,6 @@
 *.jpg
+*.jpg
+/data/*
+/examples/*
+/_MACOSX/*
+/linux_sim/*
