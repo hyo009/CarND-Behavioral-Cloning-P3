@@ -1,5 +1,4 @@
 *.jpg
-*.jpg
 /data/*
 /examples/*
 /_MACOSX/*
