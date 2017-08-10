@@ -73,6 +73,7 @@ At first, I trianed the Nvidia model with 5 epoch. It seemed overfitting. So I f
 **Training process**
 ![alt text](https://github.com/hyo009/CarND-Behavioral-Cloning-P3/blob/master/images/epoch.png)
 
-
-**MSE vs EPOCH**
 ![alt text](https://github.com/hyo009/CarND-Behavioral-Cloning-P3/blob/master/images/training.png)
+
+**Video**
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/mZrJWqp0img/0.jpg)](https://www.youtube.com/watch?v=mZrJWqp0img)
