@@ -40,3 +40,8 @@ I followed the lectures and tried the models. For my submission, I choose Nvidia
 
 #### 2. Attempts to reduce overfitting in the model
 I augmented the data to reduce overfitting. I used all three cameras' images (left, center and right). I chose 0.2 as the correction factor of steering angles as discussed in the lectures. Moreover, in the generator, I set the possibility of 50% to flip image horizontally in order to augment the data.
+
+[//]: # (Image References)
+
+[image1]: ./images/lcr.png "left, center and right images"
+[image2]: ./images/crop.png "cropping YUV image"
