@@ -30,7 +30,6 @@ python drive.py model.h5
 ```
 
 #### 3. Submission code is usable and readable
-
 The model.py file contains the code for training and saving the convolution neural network. The file shows the pipeline I used for training and validating the model, and it contains comments to explain how the code works.
 
 ### Model Architecture and Training Strategy
@@ -57,4 +56,13 @@ My model used adam optimizer, so I did not have to tune any parameters. The mode
 #### 4. Appropriate training data
 Training data was chosen to keep the vehicle driving on the road. I used a combination of center lane driving, recovering from the left and right sides of the road. At first, I used center images only. The vehicle cannot come back to the center of the lane at autonomous mode. Then I added left and right images to train the vehicle recover from the left and right sides of the road. I also tried to add more training data by myself. My new data's steering angles were recorded by my keyboard, which is not smooth. When I add my new data into training data, the result of model seems worse. So I only used original data.
 
+### Model Architecture and Training Strategy
 
+#### 1. Solution Design Approach
+I tried Lenet model first and trained it with center images. The result is not good. Then I added left and right images. The model still cannot keep the vehicle at the center of lane. Then I read Nvidia's paper. The result of the paper seems great and the number of parameters is pretty small. So I decided to have a try. I kept all the pre-processing techiques and trained Nvidia model. The result was great.
+
+#### 2. Final Model Architecture
+The final model architecture Nvidia (model.py lines 88-108) consisted of a convolution neural network with the following layers and layer sizes 24@31x98, 36@14x47, 48@5x22, 64@3x20, 64@1x18. Then it has a flatten layer followed by 3 fully connected layers outputting 100 neurons, 50 neurons and 10 neurons.
+
+** Nvidia model from papar "End to End Learning for Self-Driving Cars"
+![alt text](https://github.com/hyo009/CarND-Behavioral-Cloning-P3/blob/master/images/lcr.png?raw=true "left, center and right images")
