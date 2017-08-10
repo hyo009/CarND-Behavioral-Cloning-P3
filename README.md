@@ -50,3 +50,11 @@ I used sklearn library function shuffle() to randomize training data.(model.py l
 ![alt text](https://github.com/hyo009/CarND-Behavioral-Cloning-P3/blob/master/images/lcr.png?raw=true "left, center and right images")
 
 
+#### 3. Model parameter tuning
+My model used adam optimizer, so I did not have to tune any parameters. The model tuned automatically.(model.py line 110)
+
+
+#### 4. Appropriate training data
+Training data was chosen to keep the vehicle driving on the road. I used a combination of center lane driving, recovering from the left and right sides of the road. At first, I used center images only. The vehicle cannot come back to the center of the lane at autonomous mode. Then I added left and right images to train the vehicle recover from the left and right sides of the road. I also tried to add more training data by myself. My new data's steering angles were recorded by my keyboard, which is not smooth. When I add my new data into training data, the result of model seems worse. So I only used original data.
+
+
