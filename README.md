@@ -65,4 +65,4 @@ I tried Lenet model first and trained it with center images. The result is not g
 The final model architecture Nvidia (model.py lines 88-108) consisted of a convolution neural network with the following layers and layer sizes 24@31x98, 36@14x47, 48@5x22, 64@3x20, 64@1x18. Then it has a flatten layer followed by 3 fully connected layers outputting 100 neurons, 50 neurons and 10 neurons.
 
 ** Nvidia model from papar "End to End Learning for Self-Driving Cars"
-![alt text](https://github.com/hyo009/CarND-Behavioral-Cloning-P3/blob/master/images/lcr.png?raw=true "left, center and right images")
+![alt text](https://github.com/hyo009/CarND-Behavioral-Cloning-P3/blob/master/images/Nvidia.png?raw=true "left, center and right images")
