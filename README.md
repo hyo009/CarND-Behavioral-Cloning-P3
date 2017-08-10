@@ -36,14 +36,17 @@ The model.py file contains the code for training and saving the convolution neur
 ### Model Architecture and Training Strategy
 
 #### 1. An appropriate model architecture has been employed
-I followed the lectures and tried the models. For my submission, I choose Nvidia model. As explained in the lectures, RELU Layers were provided in terms of activation of Convolutional Layers to introduce non-linearity in the model. I used Cropping2D method from Keras to remove the sky and the small area in front of vehicle to reduce parameters and training time of the model.
+I followed the lectures and tried the models. For my submission, I choose Nvidia model. As explained in the lectures, RELU Layers were provided in terms of activation of Convolutional Layers to introduce non-linearity in the model. I used Cropping2D method from Keras to remove the sky and the small area in front of vehicle to reduce parameters and training time of the model.(model.py line 96)
+
+**cropping YUV images**
+![alt text](https://github.com/hyo009/CarND-Behavioral-Cloning-P3/blob/master/images/crop.png?raw=true "cropping YUV images")
 
 #### 2. Attempts to reduce overfitting in the model
-I augmented the data to reduce overfitting. I used all three cameras' images (left, center and right). I chose 0.2 as the correction factor of steering angles as discussed in the lectures. Moreover, in the generator, I set the possibility of 50% to flip image horizontally in order to augment the data.
+I augmented the data to reduce overfitting. I used all three cameras' images (left, center and right). I chose 0.2 as the correction factor of steering angles as discussed in the lectures. Moreover, in the generator, I flip image horizontally in order to augment the data.(model.py line 65,66)
 
-[//]: # (Image References)
-left, center and right images
+I used sklearn library function shuffle() to randomize training data.(model.py line 73) I also used train_test_split() to create validation data from training data (model.py line 82).
+
+**left, center and right images**
 ![alt text](https://github.com/hyo009/CarND-Behavioral-Cloning-P3/blob/master/images/lcr.png?raw=true "left, center and right images")
-cropping YUV images
-![alt text](https://github.com/hyo009/CarND-Behavioral-Cloning-P3/blob/master/images/crop.png?raw=true "cropping YUV images")
+
 
